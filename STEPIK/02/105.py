@@ -50,3 +50,26 @@
 # students = {'Сергей': (165, 62), 'Дима': (178, 61), 'Катя': (162, 62), 'Диана': (168, 69)}
 # dict = {i: students[i] for i in students if (students[i][0] > 167 and students[i][1] < 75)}
 # print(dict)
+
+# tuples = [(26, 1, 30), (47, 5, 4), (11, 7, 9)]
+# dict = {i[0]:i[1:] for i in tuples}
+# print(dict)
+
+student_ids = ['X142', 'B065', 'X144']
+student_names = ['Nikita Karpov', 'Anna Chernova', 'Ruslan Magarov']
+student_grades = [88, 85, 62]
+
+#dict = [str(student_ids[i]): [student_names[i]] + [student_grades[i]]  for i in range(len(student_ids))]
+#sp = [{student_ids[i]:{student_names[i]:student_grades[i]} for i in range(len(student_ids))}]
+#sp = dict(zip(student_ids, dict(zip(student_names,student_grades))))
+
+sp = [{student_ids[i]:{student_names[i]:student_grades[i]}} for i in range(len(student_ids))] 
+print(sp)
+
+result = [
+    {id: {name: grade}}
+    for id, name, grade in zip(
+        student_ids, student_names, student_grades
+    )
+]
+print(result)
