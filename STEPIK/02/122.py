@@ -121,20 +121,20 @@
 # print(password)
 
 
-from string import *
-import random
+# from string import *
+# import random
 
-LETTER = {'EN': [x for x in ascii_uppercase if x not in 'OI'],
-          'en': [x for x in ascii_lowercase if x not in 'ol'],
-          'dig': [x for x in digits if x not in '01']}
+# LETTER = {'EN': [x for x in ascii_uppercase if x not in 'OI'],
+#           'en': [x for x in ascii_lowercase if x not in 'ol'],
+#           'dig': [x for x in digits if x not in '01']}
 
-def generate_password(length):
-    password = ''.join(random.sample(random.choice(LETTER['EN'])+random.choice(LETTER['dig'])+"".join(random.sample(LETTER['en'],length-2)), length))
-    return password
-def generate_passwords(count, length):
-    for i in range(count):
-        print(generate_password(length))
+# def generate_password(length):
+#     password = ''.join(random.sample(random.choice(LETTER['EN'])+random.choice(LETTER['dig'])+"".join(random.sample(LETTER['en'],length-2)), length))
+#     return password
+# def generate_passwords(count, length):
+#     for i in range(count):
+#         print(generate_password(length))
 
-n, m = int(input()), int(input())
+# n, m = int(input()), int(input())
 
-generate_passwords(n,m)
+# generate_passwords(n,m)
