@@ -28,6 +28,6 @@
 
 import itertools
 
-l = ['1,2,3', '2']
+l = ['приоритет', 'идентификатор документа']
 for x in itertools.permutations(l):
     print(x)

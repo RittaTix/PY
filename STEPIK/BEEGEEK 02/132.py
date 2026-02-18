@@ -72,18 +72,16 @@
 
 # print(*sp, sep='\n')
 
-# Два for, в первом i от 1 до n + 1, во втором j от i до n +1(это чтобы лишний раз программу за ненадобностью не гонять).  
-# Потом условие if gcd(наши числа на данной итерации i, j) равны 1: Дальше через Fraction(i, j)  добавляем в пустой list. 
-# В конце выводим его через sorted
 
-from fractions import Fraction
-from math import gcd
-n = int(input())
-sp = []
 
-for i in range(1,n+1):
-    for j in range(i + 1, n + 1):
-        if gcd (i,j) == 1:
-            sp.append(Fraction(i,j))
+# from fractions import Fraction
+# from math import gcd
+# n = int(input())
+# sp = []
 
-print(*sorted(sp), sep='\n')
+# for i in range(1,n+1):
+#     for j in range(i + 1, n + 1):
+#         if gcd (i,j) == 1:
+#             sp.append(Fraction(i,j))
+
+# print(*sorted(sp), sep='\n')
